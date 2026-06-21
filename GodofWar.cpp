@@ -2,7 +2,7 @@
 //战神1
 //作者原创
 //作者：岚光、米饭蒸螃蟹，谢XX，Tab666，超级小蟹
-//禁止抄袭（比如奖光，许XX，Space999，抄袭/借鉴了我，他做的目前叫《战神剧情版1》）
+//禁止抄袭（比如奖光，许XX，Space999，抄袭/借鉴了我（他的话，我已许可，不算抄袭），他做的目前叫《战神剧情版1》）
 //由于我还算个蒟蒻，所以不喜勿喷
 //向着神犇前进
 //作为一个GESP3级几乎满分通过的OIer，我感到我做的是多么不可思议，只能说:
@@ -808,6 +808,7 @@ int main(){
     while(!gameover){
         print2("请输入你要去干什么？");
         cout<<endl;
+		
         int choice;
         cout << "1、交易市场" << endl;
         cout << "2、探险世界" << endl;
@@ -818,35 +819,43 @@ int main(){
         cout << "7、删除存档" << endl;
         cout << "8、退出游戏" << endl;
         cout << "请选择（1、2、3、4、5、6、7、8）" << endl;
+		
         cin >> choice;
 		system("cls");
+		
         if(choice == 1){
         	cout<<"正在前往交易市场…\n";
         	Sleep(1000);
             shopMenu(w);            
         }
+			
         else if(choice == 2){
         	cout<<"正在前往探险世界…\n";
 			Sleep(1000);
             adventureWorld(w);
         }
+			
         else if(choice == 3){
         	cout<<"正在前往决斗地狱…\n";
         	Sleep(1000);
             battleArena(w);
         }
+			
         else if(choice == 4){
         	system("cls");
             showStatus(w);
         }
+			
         else if(choice == 5){
         	system("cls");
             healPlayer(w);
         }
+			
         else if(choice == 6){
         	system("cls");
             saveGame(w);
         }
+			
         else if(choice ==7){
         	system("cls");
             print("确定要删除存档并退出吗？这将永久删除您的游戏进度！(1=确定, 0=取消):");
@@ -860,6 +869,7 @@ int main(){
                 cout << "取消删除存档。" << endl;
             }
         }
+			
         else if(choice == 8){
         	system("cls");
             // 退出前询问是否保存
